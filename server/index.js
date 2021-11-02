@@ -1,5 +1,4 @@
 import express from "express";
-import { resolve } from "path";
 
 const app = express();
 const port = 3000; //add your port here
@@ -37,7 +36,7 @@ app.post("/create-payment-intent", async (req, res) => {
   }
 });
 
-//-------------------------aceptar pagos--------------------------//
+//-------------------------accept payment--------------------------//
 
 // This example sets up an endpoint using the Express framework.
 // Watch this video to get started: https://youtu.be/rPR2aJ6XnAc.

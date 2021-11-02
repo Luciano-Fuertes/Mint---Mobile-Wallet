@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Transfers from "../../Transfers/index.js";
-import CardContact from "../../CardContact/index.js";
+import Transfers from "../components/Transfers/index.js";
+import CardContact from "../components/CardContact/index.js";
 
 const Stack = createStackNavigator();
 
-function TransferNav() {
+function TransfersNav() {
     return (
         <Stack.Navigator initialRouteName="TransferIndex" screenOptions={{ headerShown: false}}>
             <Stack.Screen name="TransferIndex" component={Transfers} />
@@ -14,4 +14,4 @@ function TransferNav() {
     )
 }
 
-export default TransferNav
+export default TransfersNav

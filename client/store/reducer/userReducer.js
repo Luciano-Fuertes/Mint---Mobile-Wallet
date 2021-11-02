@@ -9,17 +9,6 @@ const userReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case CREATE_USER:
       return { ...state, user: payload };
-    case CREATE_USER:
-      return { ...state, user: payload };
-
-    case GET_USER:
-      return { ...state, user: payload };
-
-    case GET_JWT:
-      return { ...state, jwtToken: { payload } };
-
-    case UPDATE_USER:
-      return { ...state, user: payload };
 
     case GET_USER:
       return { ...state, user: payload };

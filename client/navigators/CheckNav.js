@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import DrawerBar from "../components/Drawer";
-import NewRegisterExt from "../loginComponents/NewRegisterExt";
+import DrawerNav from "./DrawerNav";
+import NewRegisterExt from "../LoginScreens/NewExtendedRegister";
 import { useSelector, useDispatch } from "react-redux";
 import { CredentialsContext } from "../loginComponents/CredentialsContext";
 import { getUser } from "../store/actions/userActions";
@@ -32,7 +32,7 @@ export default function CheckNav() {
       ) : (
         <Stack.Screen
           name="Drawer"
-          component={DrawerBar}
+          component={DrawerNav}
           options={{ headerShown: false }}
         />
       )}

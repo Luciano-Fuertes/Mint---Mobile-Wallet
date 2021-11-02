@@ -15,11 +15,6 @@ import {
   ButtonText,
   MsgBox,
   Line,
-  ExtraView,
-  ExtraText,
-  TextLink,
-  TextLinkContent,
-  SubTitle,
 } from "../loginComponents/styles";
 import { View, TouchableOpacity, ActivityIndicator } from "react-native";
 import { colors } from "../utils/colors";
@@ -27,8 +22,6 @@ const { lightGray, brand, primary } = colors;
 import { Octicons, Ionicons } from "@expo/vector-icons";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import KeyboardAvoidingWrapper from "../loginComponents/KeyboardAvoidingWrapper";
-import axios from "axios";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CredentialsContext } from "../loginComponents/CredentialsContext";
 import { createUser } from "../store/actions/userActions";
 
@@ -87,7 +80,6 @@ export default function NewRegisterExt({ navigation }) {
           <Formik
             initialValues={{
               nombre: name,
-              //apellidos: "",
               mail: email,
               nickname: "",
               direccion: "",

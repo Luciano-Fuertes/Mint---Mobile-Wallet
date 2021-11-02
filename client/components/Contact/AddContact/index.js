@@ -2,10 +2,9 @@ import React from "react";
 import { Text, View, TextInput, Pressable } from "react-native";
 import { useForm, Controller } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { updateContacts } from "../../store/actions/contactsActions";
-import { Title, TouchableRipple } from "react-native-paper";
+import { updateContacts } from "../../../store/actions/contactsActions";
+import { Title } from "react-native-paper";
 import { styles } from "./styles";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export default function AddContact({ route }) {
   const {

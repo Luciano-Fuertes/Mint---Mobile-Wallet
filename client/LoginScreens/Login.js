@@ -35,8 +35,6 @@ const Login = ({ navigation }) => {
   const [message, setMessage] = useState();
   const [messageType, setMessageType] = useState();
   const [googleSubmitting, setGoogleSubmitting] = useState(false);
-
-  // credentials context
   const { storedCredentials, setStoredCredentials } =
     useContext(CredentialsContext);
 
@@ -101,7 +99,6 @@ const Login = ({ navigation }) => {
       });
   };
 
-  // Persisting login
   const persistLogin = (credentials, message, status) => {
     AsyncStorage.setItem("flowerCribCredentials", JSON.stringify(credentials))
       .then(() => {

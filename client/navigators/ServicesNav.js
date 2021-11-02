@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import ServicesIndex from "../index.js";
-import ServiceDetail from "../../ServiceDetail/index.js";
+import ServicesIndex from "../components/Services/index.js";
+import ServiceDetail from "../components/Services/ServiceDetail/index.js";
 
 const Stack = createStackNavigator();
 
-function ServiceNav() {
+function ServicesNav() {
   return (
     <Stack.Navigator
       initialRouteName="ServicesIndex"
@@ -17,4 +17,4 @@ function ServiceNav() {
   );
 }
 
-export default ServiceNav;
+export default ServicesNav;

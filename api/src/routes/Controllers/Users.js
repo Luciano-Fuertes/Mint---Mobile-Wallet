@@ -1,4 +1,3 @@
-const axios = require("axios");
 const { Usuario, Cuentas } = require("../../db");
 require("dotenv").config();
 
@@ -65,14 +64,14 @@ async function createUser(req, res, next) {
 async function getUser(req, res, next) {
   try {
     const mail = req.query.mail;
-    if (mail){
+    if (mail) {
       let user = await Usuario.findOne({
         where: {
           mail: mail,
         },
       });
       user ? res.send(user).status(200) : res.send(null).status(204);
-    }else res.send(null);
+    } else res.send(null);
   } catch (error) {
     next(error);
   }
@@ -121,4 +120,4 @@ async function updateUser(req, res, next) {
   res.send(user2);
 }
 
-module.exports = { createUser, getUser, updateUser};
+module.exports = { createUser, getUser, updateUser };

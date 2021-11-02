@@ -3,7 +3,6 @@ const {
   createUser,
   getUser,
   updateUser,
-  doTransfer,
 } = require("./Controllers/Users.js");
 
 const router = Router();

@@ -6,19 +6,19 @@ import {
   DrawerItem,
 } from "@react-navigation/drawer";
 import { View, Image, TouchableOpacity } from "react-native";
-import { CredentialsContext } from "../../loginComponents/CredentialsContext";
-import UserProfile from "../UserProfile/index";
-import TabNav from "../TabNav/index.js";
-import AccountNav from "../Accounts/AccountNav/index.js";
+import { CredentialsContext } from "../loginComponents/CredentialsContext";
+import UserProfile from "../components/UserProfile/index";
+import HomeButtonsNav from "./HomeButtonsNav.js";
+import Accounts from "../components/Accounts/index";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import FAQ from "../FAQ/index.js";
-import About from "../About";
-import { colors } from "../../utils/colors.js";
+import FAQ from "../components/FAQ/index.js";
+import About from "../components/About";
+import { colors } from "../utils/colors.js";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 const Drawer = createDrawerNavigator();
 
-function DrawerBar({ navigation }) {
+function DrawerNav({ navigation }) {
   const { storedCredentials, setStoredCredentials } =
     useContext(CredentialsContext);
 
@@ -91,7 +91,7 @@ function DrawerBar({ navigation }) {
     >
       <Drawer.Screen
         name="Home"
-        component={TabNav}
+        component={HomeButtonsNav}
         options={{
           drawerIcon: () => (
             <FontAwesome5 name="home" color={colors.brand} size={20} />
@@ -109,7 +109,7 @@ function DrawerBar({ navigation }) {
       />
       <Drawer.Screen
         name="Accounts"
-        component={AccountNav}
+        component={Accounts}
         options={{
           drawerIcon: () => (
             <FontAwesome5 name="coins" color={colors.brand} size={20} />
@@ -138,4 +138,4 @@ function DrawerBar({ navigation }) {
   );
 }
 
-export default DrawerBar;
+export default DrawerNav;

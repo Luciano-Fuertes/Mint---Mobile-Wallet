@@ -26,18 +26,9 @@ This project was made by a team of 7 people _(check contributors)_, which was ou
 To run this project locally follow the next steps:
 
 - Clone (or fork and clone) this repository
-- Install [PostgreSQL](https://www.postgresql.org/)
-- Run command prompt and enter `psql -U postgres` and enter the password you provided when installing PostgreSQL.
-- Enter `CREATE DATABASE wallet;`
 - Run `npm i` inside each folder: `/api`, `/server` and `/client`
-- Create a `.env` file inside `api` folder with the format provided bellow:
-
-  - DB_HOST = ""
-  - DB_USER = ""
-  - DB_PASSWORD = ""
-  - DB_PORT = ""
-
-- Run `npm start` inside `/api`, `/server`, `/client`
+- Write your local IP address on `/client/constants.js`
+- Run `npm start` inside `/server`, `/client`
 - An expo localhost page will display a QR code in your browser. Scan it with the expo app and MINT will start on your device.
 
 # About Us :busts_in_silhouette:

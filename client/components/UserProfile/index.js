@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import { styles } from "./styles";
 import { useSelector } from "react-redux";
 import {
@@ -11,10 +11,9 @@ import {
 } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { colors } from "../../utils/colors.js";
-
-//-------------qr------------------
 import QRCode from "react-native-qrcode-svg";
-//------------qr------------------------
+
+
 function UserProfile({ navigation }) {
   const state = useSelector((state) => state.user.user);
   const balance = useSelector((state) => state.account.accounts);

@@ -1,24 +1,15 @@
 import React from "react";
 import { styles } from "./styles";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   Button,
-  SafeAreaView,
   Text,
   View,
-  StyleSheet,
   Dimensions,
-  ScrollView,
-  Image,
 } from "react-native";
-
 import {
   LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
   ContributionGraph,
-  StackedBarChart,
 } from "react-native-chart-kit";
 
 function Statistics({ navigation }) {

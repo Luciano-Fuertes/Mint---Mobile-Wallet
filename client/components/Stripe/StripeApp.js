@@ -7,25 +7,17 @@ import {
   Alert,
   Pressable,
 } from "react-native";
-
 import { CardField, useConfirmPayment } from "@stripe/stripe-react-native";
-//---------------deposit----------------
 import { useEffect, useContext } from "react";
-import { ScrollView, TouchableOpacity } from "react-native";
-
 import { useSelector, useDispatch } from "react-redux";
 import { getAccount } from "../../store/actions/accountActions";
-import { getUser } from "../../store/actions/userActions";
 import { deposit } from "../../store/actions/accountActions";
 import { CredentialsContext } from "../../loginComponents/CredentialsContext";
-//-----------------deposit-----------------
-import { URL_STRIPE_3000 } from "../../constantes";
-import { URL_API_3001 } from "../../constantes";
-import axios from "axios";
+import { URL_STRIPE_3000 } from "../../constants";
 import { colors } from "../../utils/colors";
 
-const StripeApp = ({ navigation }) => {
-  //--------------deposit---------------------
+const StripeApp = () => {
+  
   const dispatch = useDispatch();
   const { storedCredentials, setStoredCredentials } =
     useContext(CredentialsContext);
@@ -36,8 +28,6 @@ const StripeApp = ({ navigation }) => {
   useEffect(() => {
     dispatch(getAccount(user.idusuario));
   }, []);
-
-  //----------------------deposit--------------------
 
   const [email, setEmail] = useState();
   const [cardDetails, setCardDetails] = useState();

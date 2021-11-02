@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
-import { getContacts } from "../../store/actions/contactsActions";
-import { makeTransfer } from "../../store/actions/transferActions";
-import { Title, TouchableRipple } from "react-native-paper";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { makeTransfer } from "../../../store/actions/transferActions";
+import { Title } from "react-native-paper";
 import { styles } from "./styles";
 
-function CardContact({ navigation, route }) {
+function CardContact({ route }) {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
   const contacts = useSelector((state) => state.contacts.contacts);
@@ -33,7 +31,6 @@ function CardContact({ navigation, route }) {
     };
     dispatch(makeTransfer(dataFiltered, user.idusuario));
   };
-  function post(data) {}
 
   return (
     <View>

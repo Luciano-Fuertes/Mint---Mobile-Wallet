@@ -1,7 +1,6 @@
 import { GET_CONTACT, GET_ALL_CONTACT, UPDATE_CONTACT } from "./types";
-import { url } from "./const";
 import axios from "axios";
-import { URL_API_3001 } from "../../constantes";
+import { URL_API_3001 } from "../../constants";
 
 export function getContacts(userId) {
   return async (dispatch) => {

@@ -3,7 +3,7 @@ import { View, Pressable, Text, Image, TextInput } from "react-native";
 import { styles } from "./styles";
 import { servicePayment } from "../../store/actions/transferActions";
 import { useSelector, useDispatch } from "react-redux";
-import { Title, TouchableRipple } from "react-native-paper";
+import { Title } from "react-native-paper";
 
 function ServiceDetail({ route, navigation }) {
   const dispatch = useDispatch();

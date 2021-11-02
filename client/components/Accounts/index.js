@@ -1,18 +1,16 @@
-import React, { useEffect, useMemo, useContext } from "react";
-
+import React, { useEffect } from "react";
 import { styles } from "./styles";
 import {
   View,
   Text,
   ScrollView,
-  TextInput,
-  TouchableOpacity,
 } from "react-native";
 import { getTransfers } from "../../store/actions/transferActions";
 import { useSelector, useDispatch } from "react-redux";
 import { getPaymentHistory } from "../../store/actions/accountActions";
-import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { Title, Caption } from "react-native-paper";
+
+
 
 function Accounts() {
   const dispatch = useDispatch();

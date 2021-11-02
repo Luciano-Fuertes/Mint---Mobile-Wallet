@@ -1,8 +1,5 @@
-// require("dotenv").config();
 import axios from "axios";
- import { URL_API_3001 } from "../../constantes";
-// const { URL_API_3001 } = process.env;
-
+import { URL_API_3001 } from "../../constants";
 import { GET_ACCOUNT, DEPOSIT, GET_SERVICE_PAYMENT } from "./types";
 
 export function getAccount(id) {

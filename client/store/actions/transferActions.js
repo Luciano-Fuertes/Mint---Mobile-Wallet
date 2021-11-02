@@ -1,10 +1,7 @@
 import axios from "axios";
-//import { url } from "./const";
-
-import { URL_API_3001 } from "../../constantes";
+import { URL_API_3001 } from "../../constants";
 import { getAccount, getPaymentHistory } from "./accountActions";
-
-import { GET_TRANSFERS, MAKE_TRANSFER } from "./types";
+import { GET_TRANSFERS } from "./types";
 
 export function getTransfers(id) {
   return async (dispatch) => {

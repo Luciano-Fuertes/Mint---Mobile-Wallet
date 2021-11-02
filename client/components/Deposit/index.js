@@ -1,8 +1,7 @@
 import React from "react";
-//-----------Stripe-------------
 import StripeApp from "../Stripe/StripeApp";
 import { StripeProvider } from "@stripe/stripe-react-native";
-//-----------Stripe------------
+
 
 function Deposit({ navigation }) {
   return (
